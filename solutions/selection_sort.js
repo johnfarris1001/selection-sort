@@ -42,13 +42,13 @@ if (require.main === module) {
   // BENCHMARK HERE, and print the average runtime
   const longInput = [];
 
-  for (let i = 0; i < 100; ++i) {
+  for (let i = 0; i < 1000; ++i) {
     longInput.push(Math.random());
   }
 
   const startTime = Date.now();
 
-  for (let i = 0; i < 1000; ++i) {
+  for (let i = 0; i < 10000; ++i) {
     selectionSort([2, 1]);
     selectionSort(longInput);
   }
@@ -63,12 +63,12 @@ module.exports = selectionSort;
 // Please add your pseudocode to this file
 /***************************************************************************
  * initialize an empty Array called sorted
- * 
+ *
  * loop array length times:
  *    store minimum value in array in min
  *    remove minimum value from input array
  *    push min onto sorted
- * 
+ *
  * return sorted
 ****************************************************************************/
 
